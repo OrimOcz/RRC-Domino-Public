@@ -1,0 +1,42 @@
+RewriteEngine on
+
+RewriteCond %{REQUEST_URI} !/pages/maintenance.html$ 
+RewriteCond %{REMOTE_ADDR} !^88\.102\.219\.52$
+ RewriteCond %{REQUEST_URI} !\.(jpe?g?|png|gif|ttf) [NC]
+RewriteRule $ /pages/maintenance.html [R=302,L] 
+
+RewriteRule ^$ /index.php [L]
+DirectoryIndex index.php uvod.php
+
+#HTTPS
+RewriteCond %{HTTPS} off 
+RewriteRule (.*) https://%{SERVER_NAME}/$1 [R=301] 
+Header set Content-Security-Policy "upgrade-insecure-requests;"
+
+# podstrčení PHP, přepsat pouze na existující skript
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^([^.]+)$    $1.php    [L]
+
+#FAVICON
+#Options +FollowSymLinks
+#RewriteRule ^favicon.ico inc/logo/favicon.ico [L]
+
+
+#OCHRNA PROTI BOTŮM
+RewriteCond %{HTTP_USER_AGENT} Wget [OR]
+RewriteCond %{HTTP_USER_AGENT} CherryPickerSE [OR]
+RewriteCond %{HTTP_USER_AGENT} CherryPickerElite [OR]
+RewriteCond %{HTTP_USER_AGENT} EmailCollector [OR]
+RewriteCond %{HTTP_USER_AGENT} EmailSiphon [OR]
+RewriteCond %{HTTP_USER_AGENT} EmailWolf [OR]
+RewriteCond %{HTTP_USER_AGENT} ExtractorPro
+RewriteRule ^.*$ http://www.spampoison.com/ [L]
+
+ErrorDocument 401 /pages/401.html
+ErrorDocument 403 /pages/403.html
+ErrorDocument 404 /pages/404.html
+ErrorDocument 405 /pages/405.html
+ErrorDocument 406 /pages/406.html
+ErrorDocument 500 /pages/500.html
+ErrorDocument 501 /pages/501.html
+ErrorDocument 503 /pages/503.html

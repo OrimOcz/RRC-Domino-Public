@@ -1,0 +1,127 @@
+#CookieModal {
+  position: fixed; /* Stay in place */
+  z-index: 20; /* Sit on top */
+  left: 0px;
+  bottom: 0px;
+  width: 100%; /* Full width */
+}
+#CookieModal .modal-open {
+    overflow: hidden;
+}
+/* Modal Content */
+#CookieModal .modal-content {
+	box-shadow: 0 -10px rgba(167, 5, 16, 1);
+  	background-color:rgba(0,0,0,0.90);
+	padding-top: 20px;
+  	margin: auto;
+	color: white;
+	height: auto;
+  	border: 1px solid #2c2c2c;;
+  	width: 100%;
+}
+	#CookieModal .modal-content h4{
+		text-align: left;
+		font-size: 52px;
+		margin-bottom: 10px;
+	}
+	#CookieModal .modal-content p{
+		margin-top: 5px;
+		margin-bottom: 5px;
+		font-family: Second;
+	}
+	#CookieModal .globalCookies{
+		display: grid;
+		width: 95%;
+		margin-right: auto;
+		margin-left: auto;
+		grid-column-gap: 5%;
+        grid-row-gap: 20px;
+		grid-template-columns: 10% 85%;
+	}
+	#CookieModal .globalCookies img{
+		width: 100%;
+	}
+	#CookieModal .links{
+		color: white;
+		text-decoration: underline 1px red;
+	}
+	#CookieModal .buttons{
+		margin-top: 5px;
+		text-align: right;
+		 display: block; 
+	}
+	#CookieModal .cookieMore{
+		background: none;
+		border: solid 2px green;
+	}
+	#CookieModal .button{
+		margin: 10px;
+	}
+	#CookieModal #SetCookies{
+		display: none;
+	}
+@media (max-width: 800px) {
+	#CookieModal .globalCookies img{
+		display: none;
+	}
+	#CookieModal .globalCookies{
+		grid-column-gap: 0%;
+        grid-row-gap: 0px;
+		grid-template-columns: 100%;
+  	}
+}
+	#CookieModal input[type="checkbox"]{
+    display: none;
+  }
+  
+  #CookieModal label{
+    color: yellow;
+    position: relative;
+  }
+  
+  #CookieModal input[type="checkbox"] + label::before{
+    content: ' ';
+    display: block;
+    height: 18px;
+    width: 45px;
+    border: 1px solid #2c2c2c;
+    border-radius: 9px;
+    position: absolute;
+    top: 0px;
+    left: -65px;
+	background: #ca0018;
+  }
+  
+  #CookieModal input[type="checkbox"] + label::after{
+    content: ' ';
+    display: block;
+    height: 30px;
+    width: 30px;
+    border: 1px solid #2c2c2c;   
+    border-radius: 50%;
+    position: absolute;
+    top: -6px;
+    left: -75px;
+    background: #ca0018;
+    transition: all 0.3s ease-in;
+  }
+  
+  #CookieModal input[type="checkbox"]:checked + label::after{
+    left: -40px;
+	  background: green;	
+    transition: all 0.3s ease-in;
+  }
+#CookieModal input[type="checkbox"]:checked + label::before{
+		background: green;	 
+}
+			 #CookieModal .check{
+				 text-align: center;
+				 margin-top: 20px;
+			 }
+				 #CookieModal .setCookies h5{
+					 font-size: 28px;
+					 margin-top: 20px;
+				 }
+				 #CookieModal .checklabel{
+					 color: gray;
+				 }

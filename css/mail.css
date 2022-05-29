@@ -1,0 +1,65 @@
+@charset "utf-8";
+/* CSS Document */
+		        @font-face {
+  font-family: Basic;
+  src: url("../fonts/BebasNeue-Regular.ttf");
+}
+		@font-face {
+  font-family: Second;
+  src: url("../fonts/Franklin Gothic Book Regular.ttf");
+}
+		html{
+			background: #2c2c2c;
+		}
+		.center{
+			display: block;
+  			margin-left: auto;
+  			margin-right: auto;
+		}
+		#content{
+			width: 60%;
+			max-width: 1000px;
+			background: black;
+			padding: 50px;
+			border-radius: 20px;
+		}
+		#content img{
+  			width: 500px;
+
+		}
+		#content .title {
+			font-family: Basic;
+			text-align: center;
+			color: lightgray;
+		}
+		.title h1{
+			font-size: 50px;
+			margin: 0;
+			margin-top: 50px;
+		}
+		.title{
+		}
+		.link{
+			color: #E31E24;
+			font-size: 40px;
+			text-shadow: 0 0 20px #8A1114;
+		}
+		.message{
+			background: lightgray;
+			height: auto;
+			clip-path: polygon(100% 60px, 100% 100%, 0 100%, 0 0);
+			padding-top: 40px;
+			padding-left: 20px;
+			padding-right: 20px;
+			padding-bottom: 20px
+		}
+		.text{
+			color: #363636;
+			font-family: Second;
+			font-size: 20px;
+		}
+		#footer p{
+			text-align: center;
+			font-family: Second;
+			color: white;
+		}

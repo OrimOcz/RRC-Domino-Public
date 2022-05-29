@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+	<script src="https://kit.fontawesome.com/f307a5f3a4.js" crossorigin="anonymous"></script>
+<title>Chyba 404</title>
+    <style>
+		@font-face {
+			font-family: Second;
+			  src: url("../fonts/Franklin Gothic Book Regular.ttf");
+		}
+		@font-face {
+			  font-family: Basic;
+			  src: url("../fonts/BebasNeue-Regular.ttf");
+		}
+		*{
+			font-family: Basic;
+		}
+		h1{
+			font-size: 4em;
+			margin: 0px;
+		}
+		h1 span{
+			color: #ca0018;
+		}
+		h2{
+			font-family: Second;
+		}
+        .loader-line {
+            width: 200px;
+            height: 3px;
+            position: relative;
+            overflow: hidden;
+            background-color: #ddd;
+            margin: 5px auto;
+            -webkit-border-radius: 20px;
+            -moz-border-radius: 20px;
+            border-radius: 20px;
+        }
+
+        .loader-line:before {
+            content: "";
+            position: absolute;
+            left: -50%;
+            height: 3px;
+            width: 40%;
+            background-color: #ca0018;
+            -webkit-border-radius: 20px;
+            -moz-border-radius: 20px;
+            border-radius: 20px;
+        }
+		a{
+			color: white;
+			font-family: Second;
+		}
+        body{
+            text-align: center;
+            color: white;
+          margin: 0;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+
+        }
+		html::before{
+			background-image: url("../data/photos/dsc_2625.jpg");
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+			  content: "";
+			  position: absolute;
+			  top: 0; left: 0;
+			  width: 100%; height: 100%;
+			 filter:brightness(0.3) saturate(1);
+		}
+    </style>
+		<link rel="apple-touch-icon" sizes="180x180" href="../data/favicons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="../data/favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="../data/favicons/favicon-16x16.png">
+	<link rel="manifest" href="../data/favicons/site.webmanifest">
+	<link rel="mask-icon" href="../data/favicons/safari-pinned-tab.svg" color="#ca0018">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+	<h1>Chyba <span>#503</span></h1>
+    <div class="loader-line"></div>
+	<h2>Služba je nedostupná</h2>
+</body>
+</html>
